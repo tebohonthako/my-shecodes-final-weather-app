@@ -127,5 +127,6 @@ body {
 
   .weather-forecast-temp-min {
     opacity: 0.8;
+    font-weight: 600;
     
   }
