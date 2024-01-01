@@ -119,8 +119,13 @@ body {
   }
   .weather-forecast-temp {
     font-size: 13px;
+    color: #f65282;
   }
+  .weather-forecast-temp-max {
+    font-weight: 700;
+  }
+
   .weather-forecast-temp-min {
-    opacity: 0.5;
+    opacity: 0.8;
     
   }
