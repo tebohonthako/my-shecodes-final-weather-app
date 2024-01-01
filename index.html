@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TebooWeather</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- importing axios  -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>  
+</head>
+<body>
+  <div class="weather-app">
+    <header>
+      <!-- // S E A R C H    C I T Y  I N P U T -->
+      <form class="search-form"  id="search-form">
+          <input type="text" required placeholder="Enter City" class="search-form-input" id="search-form-input" />
+          <input type="submit" value="search" class="search-form-button">
+      </form>
+    </header>
+    <main>
+      <!-- E N D   O F   S E A R C H  I N P U T  -->
+
+      <!-- C I T Y   T E M P E R A T U R E  -->
+      <div class="weather-app-data">
+        <h1 class="weather-app-city" id="city"></h1>
+        <div class="weather-app-temperature-container">
+          <div id="icon">
+            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" class="weather-app-icon">
+          </div>
+          <div class="weather-app-temperature" id="temp"></div>
+          <div class="weather-app-unit">°C</div>
+        </div>
+      </div>
+        <p class="weather-app-details">
+          <span id="date">Monday 18:45, </span> 
+          <span id="description"></span> <br/>
+          Humidity: <strong id="humidity"></strong>, 
+          Wind: <strong id="wind"></strong>
+        </p>
+        
+        <div class="weather-forecast">
+            <div class="row">
+                <div class="col-2">
+                    <div class="weather-forecast-date">
+                        Monday
+                    </div>
+                    <br/>
+                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-day.png" alt="showers of rain weather icon" class="weather-app-icon" width="65">
+                    <div class="weather-forecast-temp">
+                        <span class="weather-forecast-temp-max">18 º</span>
+                        <span class="weather-forecast-temp-min">30 º</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+      <!-- E N D  O F  C I T Y    T E M P  -->
+      
+    </main>
+    <footer>
+        This project was coded by
+        <a href="https://github.com/tebohonthako" target="_blank"> Teboho Nthako</a>,
+        is
+        <a href="https://github.com/tebohonthako/weather-app-vanilla-js" target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and
+        <a href="https://shecodes-week7-weatherapp.netlify.app/" target="_blank"
+          >hosted on Netlify</a
+        >
+    </footer>
+  </div> 
+  <script src="./script.js"></script>
+</body>
+</html>
