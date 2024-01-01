@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                            ${day}
                        </div>
                        <br/>
-                       <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-day.png" alt="showers of rain weather icon"  width="65">
+                       <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png" alt="showers of rain weather icon"  width="88" height="88">
                        <div class="weather-forecast-temp">
                            <span class="weather-forecast-temp-max">18 º</span>
                            <span class="weather-forecast-temp-min">30 º</span>
