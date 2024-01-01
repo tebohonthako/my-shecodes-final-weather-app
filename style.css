@@ -103,12 +103,14 @@ body {
     text-align: center;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.6);
-    margin-top: -7rem;
+    margin-top: -2rem;
     font-weight: bold;
     
   }
   .weather-forecast {
     margin-top: 20px;
+    display: flex;
+    text-align: center;
     
   }
   .weather-forecast-date {

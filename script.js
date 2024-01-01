@@ -51,8 +51,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let searchInput = document.querySelector("#search-form-input");
         searchCity(searchInput.value)
     } 
-
     let searchFormElement = document.querySelector("#search-form");
     searchFormElement.addEventListener("submit", handleSearchSubmit);
-    searchCity('London');
+
+    function displayForecast() {
+        let forecastElement = document.querySelector("#forecast");
+        let days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+        let forecastHTML = "";
+
+
+        days.forEach(function(day) {
+            forecastHTML = 
+            forecastHTML + 
+            `<div class="row">
+                   <div class="col-2">
+                       <div class="weather-forecast-date">
+                           ${day}
+                       </div>
+                       <br/>
+                       <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-day.png" alt="showers of rain weather icon"  width="65">
+                       <div class="weather-forecast-temp">
+                           <span class="weather-forecast-temp-max">18 º</span>
+                           <span class="weather-forecast-temp-min">30 º</span>
+                       </div>
+                   </div>
+               </div>
+           </div>`;
+        });
+        forecastElement.innerHTML = forecastHTML;
+    }
+   
+
+    searchCity('Cape Town')
+    displayForecast()
 });
+
+
