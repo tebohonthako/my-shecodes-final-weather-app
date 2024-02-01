@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     let forecastHTML = "";
 
-    response.data.daily.forEach(function (day) {
+    response.data.daily.forEach(function (day, index) {
       forecastHTML =
         forecastHTML +
         `<div class="row">
