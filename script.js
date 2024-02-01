@@ -68,10 +68,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
         `<div class="row">
                    <div class="col-2">
                        <div class="weather-forecast-date">
-                           Thurs
+                          Thurs
                        </div>
                        <br/>
-                       <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png" alt="showers of rain weather icon"  width="88" height="88">
+                       <img src="${
+                         day.condition.icon_url
+                       }" alt="showers of rain weather icon"  width="88" height="88">
                        <div class="weather-forecast-temp">
                            <span class="weather-forecast-temp-max">${Math.round(
                              day.temperature.maximum
