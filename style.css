@@ -26,7 +26,7 @@ header {
 
 .search-form-input {
   background-color: #e8f0fe;
-  border: none;
+  border: 5px solid #f4aeba;
   border-radius: 25px;
   width: 70%;
   font-size: 16px;
