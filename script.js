@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // F E T C H I N G   A P I   D A I L Y  F O R E C A S T
   let apiKeyForecast = `8c106b65dft3cb9cbd6a0a0oc1dc9e43`;
   let apiUrlForecast = `https://api.shecodes.io/weather/v1/forecast?query={query}&key=${apiKeyForecast}`;
-  axios(apiUrlForecast).then(displayForecast);
+  axios.get(apiUrlForecast).then(displayForecast);
 
   function displayForecast(response) {
     console.log(response.data);
@@ -100,5 +100,5 @@ document.addEventListener("DOMContentLoaded", (event) => {
     forecastElement.innerHTML = forecastHTML;
   }
 
-  searchCity("Cape Town");
+  searchCity("Sandton");
 });
