@@ -52,7 +52,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
   let searchFormElement = document.querySelector("#search-form");
   searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-  // F E T C H I N G   A P I   F O R E C A S T
+  // F O R M A T  D A Y S  F O R   E A C H  D A I L Y   F O R E C A S T
+  function formatDay(timestamp) {
+    let date = new Date(timestamp * 1000);
+    let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+    return days[date.getDay()];
+  }
+
+  // F E T C H I N G   A P I   D A I L Y  F O R E C A S T
   let apiKeyForecast = `8c106b65dft3cb9cbd6a0a0oc1dc9e43`;
   let apiUrlForecast = `https://api.shecodes.io/weather/v1/forecast?query={query}&key=${apiKeyForecast}`;
   axios(apiUrlForecast).then(displayForecast);
@@ -63,12 +71,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let forecastHTML = "";
 
     response.data.daily.forEach(function (day, index) {
-      forecastHTML =
-        forecastHTML +
-        `<div class="row">
+      if (index < 7) {
+        forecastHTML =
+          forecastHTML +
+          `<div class="row">
                    <div class="col-2">
                        <div class="weather-forecast-date">
-                          Thurs
+                          ${formatDay(day.time)}
                        </div>
                        <br/>
                        <img src="${
@@ -85,6 +94,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                    </div>
                </div>
            </div>`;
+      }
     });
     let forecastElement = document.querySelector("#forecast");
     forecastElement.innerHTML = forecastHTML;
