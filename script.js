@@ -18,7 +18,7 @@ function refreshWeather(response) {
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 }
 
-function formatDate() {
+function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
   let days = [
@@ -34,7 +34,7 @@ function formatDate() {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${day} ${hours} : ${minutes}`;
+  return `${day} ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
